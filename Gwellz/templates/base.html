@@ -1,5 +1,6 @@
 {% load staticfiles%}
 {% load bootstrap4%}
+{% load fontawesome %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +8,9 @@
     <title>Gwellz</title>
     {% block styles%}
       {% bootstrap_css%}
+      {% fontawesome_stylesheet%}
       <link rel="stylesheet" href='{% static "css/master.css" %}'>
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     {% endblock%}
 
   </head>
