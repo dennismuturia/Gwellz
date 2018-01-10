@@ -7,11 +7,12 @@
     <title>Gwellz</title>
     {% block styles%}
       {% bootstrap_css%}
-      <link rel="stylesheet" href="/css/master.css">
+      <link rel="stylesheet" href='{% static "css/master.css" %}'>
     {% endblock%}
 
   </head>
   <body>
+  {% include 'navbar.html'%}
   {% block content %}
 
   {% endblock%}
