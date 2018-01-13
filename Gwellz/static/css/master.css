@@ -21,6 +21,9 @@ Image credits: unsplash.com
 /********************************/
 /*       Fade Bs-carousel       */
 /********************************/
+.my-header{
+  margin-top: -10%;
+}
 .fade-carousel {
     position: relative;
     height: 100vh;

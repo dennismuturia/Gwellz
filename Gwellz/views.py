@@ -5,3 +5,6 @@ from django.shortcuts import render
 # Create your views here.
 def home(request):
     return render(request, 'index.html')
+#This will be the contact page rendered
+def contact(request):
+    return render(request, 'contact.html')
