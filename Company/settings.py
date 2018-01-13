@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Gwellz',
-    'bootstrap4',
+    'bootstrap3',
     'fontawesome',
     'django.contrib.admin',
     'django.contrib.auth',
