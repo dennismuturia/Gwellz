@@ -8,16 +8,14 @@ from .forms import contactForms
 # Create your views here.
 def contact(request):
     form = contactForms(request.POST or None)
-    subject = ''
-    message = ''
-    email = ''
-    send_mail(
-        'Subject here',
-        'Here is the message.',
-        'from@example.com',
-        ['to@example.com'],
-        fail_silently=False,
-    )
-    if form.is_valid:
-        print (request.POST)
+
+    if form.is_valid():
+        name = form.cleaned_data['name']
+        comment = form.cleaned_data['comment']
+        subject = 'Message from Gwellz.com'
+        message = '%s %s' %(comment, name)
+        emailFrom = form.cleaned_data['email']
+        emailTo = [settings.EMAIL_HOST_USER]
+        send_mail(subject, message)
+        print ()
     return render(request, 'contact.html', locals())
