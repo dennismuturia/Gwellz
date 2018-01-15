@@ -6,5 +6,5 @@ def contact(request):
     form = contactForms(request.POST or None)
 
     if form.is_valid:
-        print(request.POST)
+        print (request.POST)
     return render(request, 'contact.html', locals())
