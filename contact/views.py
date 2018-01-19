@@ -16,6 +16,6 @@ def contact(request):
         message = '%s %s' %(comment, name)
         emailFrom = form.cleaned_data['email']
         emailTo = [settings.EMAIL_HOST_USER]
-        send_mail(subject, message)
+        send_mail(subject, message,emailFrom, emailTo, fail_silently=True)
         print ()
     return render(request, 'contact.html', locals())
