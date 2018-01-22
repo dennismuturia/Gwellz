@@ -3,6 +3,10 @@ body{
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
+/*************************** body stuff ********************************/
+h1{
+  text-align: center;
+}
 /****************************Navbar************************************/
 .logo{
   width: 15%;
@@ -109,6 +113,8 @@ Image credits: unsplash.com
     border-color: #1abc9c;
     outline: none;
     margin: 20px auto;
+    transform: 1.1;
+    transition: 1000ms;
 }
 
 /********************************/
@@ -144,6 +150,14 @@ Image credits: unsplash.com
 /************************** Body *************************************/
 h1{
   color:#fff;
+}
+/**************************About*************************************/
+.about{
+  color: #000;
+  text-align: center;
+}
+.thinking{
+  width: 30%;
 }
 /*************************footer***********************************/
 #myFooter{
