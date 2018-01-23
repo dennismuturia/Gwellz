@@ -18,9 +18,11 @@ from django.urls import path
 from Gwellz import views
 from contact import views as contact_views
 from projects import views as project_views
+from accounts.views import (login_view, register_view, logout_view)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('contact/', contact_views.contact, name='contact'),
-    path('projects', project_views.the_projects, name='projects')
+    path('projects/', project_views.the_projects, name='projects'),
+    path('login/', login_view, name='login')
 ]
