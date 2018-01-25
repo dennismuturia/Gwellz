@@ -24,3 +24,14 @@ class UserLoginForm(forms.Form):
             if not user.is_active:
                 raise forms.ValidationError("This user is no longer active")
         return super(UserLoginForm, self).clean(*args, **kwargs)
+
+#This is a model that will be used to store some of the new registries
+class UserRegisterForm(forms.ModelForm):
+    class meta:
+        model = User
+        fields = [
+            'username',
+            'email',
+            'password'
+        ]
+            
