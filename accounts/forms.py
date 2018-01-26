@@ -27,11 +27,16 @@ class UserLoginForm(forms.Form):
 
 #This is a model that will be used to store some of the new registries
 class UserRegisterForm(forms.ModelForm):
+    email = forms.EmailField(label="Email address", widget=forms.TextInput(attrs={'class':'form-control'}))
+    email2 = forms.EmailField(label="Confirm Email", widget=forms.TextInput(attrs={'class':'form-control'}))
+    username = forms.CharField(max_length = 20, widget=forms.TextInput(attrs={'class':'form-control'}))
+    password = forms.CharField(max_length = 20, widget=forms.PasswordInput(attrs={'class':'form-control'}))
     class Meta:
         model = User
         fields = [
             'username',
             'email',
+            'email2',
             'password'
         ]
             
