@@ -39,4 +39,13 @@ class UserRegisterForm(forms.ModelForm):
             'email2',
             'password'
         ]
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        email2 = self.cleaned_data.get('email2')
+
+        if email != email2:
+            raise forms.ValidationError("Emails do not match!")
+
+        return email
+
             
