@@ -27,7 +27,7 @@ class UserLoginForm(forms.Form):
 
 #This is a model that will be used to store some of the new registries
 class UserRegisterForm(forms.ModelForm):
-    class meta:
+    class Meta:
         model = User
         fields = [
             'username',

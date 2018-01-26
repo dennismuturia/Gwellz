@@ -22,10 +22,10 @@ def register_view(request):
     title = "Register"
     form = UserRegisterForm(request.POST or None)
     context = {
-        "form":form,
-        "title":title
+        "form": form,
+        "title": title
     }
-    return render(request, 'user.html', {context})
+    return render(request, 'user.html', context)
 
 def logout_view(request):
     logout(request)
